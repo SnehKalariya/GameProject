@@ -13,6 +13,9 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progressBar2.progress = 0.0
+        easyButton.layer.cornerRadius = 25
+        mudiumButton.layer.cornerRadius = 25
+        hardButton.layer.cornerRadius = 25
     }
     
     @IBAction func easyButtonAction(_ sender: UIButton) {
