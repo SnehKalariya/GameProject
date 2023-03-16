@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progressBar.progress = 0.0
-        playButtonOutlet.layer.cornerRadius = 5
+        playButtonOutlet.layer.cornerRadius = 25
     }
     
     func progress(){
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
             self.progressBar.progress = value
             if self.progressBar.progress == 1.0{
                 self.progressBar.progress = 0.0
-                self.showAlert(title: "1. There will be one math equation.")
+                self.showAlert(title: "1. There will be one math equation.\n 2. If equation is right,press 'FALSE'.\n  3. If equation is wrong,press 'TRUE'.")
                 self.time.invalidate()
             }
         })

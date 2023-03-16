@@ -4,7 +4,7 @@ import UIKit
 class ViewController2: UIViewController {
     
     @IBOutlet weak var easyButton: UIButton!
-    @IBOutlet weak var mudiumButton: UIButton!
+    @IBOutlet weak var mediumButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
     @IBOutlet weak var progressBar2: UIProgressView!
     
@@ -14,7 +14,7 @@ class ViewController2: UIViewController {
         super.viewDidLoad()
         progressBar2.progress = 0.0
         easyButton.layer.cornerRadius = 25
-        mudiumButton.layer.cornerRadius = 25
+        mediumButton.layer.cornerRadius = 25
         hardButton.layer.cornerRadius = 25
     }
     
