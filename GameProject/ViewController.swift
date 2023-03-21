@@ -4,7 +4,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var playButtonOutlet: UIButton!
-    @IBOutlet weak var loadingLabelOutlet: UILabel!
+    @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
     var time = Timer()
@@ -13,6 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         progressBar.progress = 0.0
         playButtonOutlet.layer.cornerRadius = 25
+        progressBar.isHidden = true
+        loadingLabel.isHidden = true
     }
     
     func progress(){
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
                 self.progressBar.progress = 0.0
                 self.showAlert(title: "1. There will be one math equation.\n 2. If equation is right,press 'FALSE'.\n  3. If equation is wrong,press 'TRUE'.")
                 self.time.invalidate()
+                self.naviget()
             }
         })
     }
@@ -34,7 +37,6 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Play", style: .default,handler: { _ in
             self.naviget()
         }))
-        
         present(alert,animated: true)
     }
     
@@ -42,10 +44,11 @@ class ViewController: UIViewController {
         let naviget = storyboard?.instantiateViewController(withIdentifier: "ViewController2") as! ViewController2
         navigationController?.pushViewController(naviget, animated: true)
     }
-
+    
     @IBAction func playButtonAction(_ sender: UIButton) {
         progress()
+        loadingLabel.isHidden = false
+        progressBar.isHidden = false
     }
-    
 }
 

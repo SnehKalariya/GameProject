@@ -8,23 +8,23 @@ class ViewController2: UIViewController {
     @IBOutlet weak var hardButton: UIButton!
     @IBOutlet weak var progressBar2: UIProgressView!
     
-    var time = Timer()
+  var time = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressBar2.progress = 0.0
+      progressBar2.progress = 0.0
         easyButton.layer.cornerRadius = 25
         mediumButton.layer.cornerRadius = 25
         hardButton.layer.cornerRadius = 25
     }
     
     @IBAction func easyButtonAction(_ sender: UIButton) {
-        progress()
+       progress()
         naviget()
     }
     
     @IBAction func mudiumButtonAction(_ sender: UIButton) {
-        progress()
+       progress()
         naviget1()
     }
     
@@ -42,7 +42,7 @@ class ViewController2: UIViewController {
             self.progressBar2.progress = value
             if self.progressBar2.progress == 1.0{
                 self.progressBar2.progress = 0.0
-              
+
                 self.time.invalidate()
             }
         })
