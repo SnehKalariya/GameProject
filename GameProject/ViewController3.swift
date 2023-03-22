@@ -31,8 +31,8 @@ class ViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        trueButton.layer.cornerRadius = 25
-        falseButton.layer.cornerRadius = 25
+        trueButton.layer.cornerRadius = 10
+        falseButton.layer.cornerRadius = 10
         genret()
         progressbar.progress = 1.0
         progress()

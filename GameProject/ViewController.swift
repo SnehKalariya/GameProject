@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progressBar.progress = 0.0
-        playButtonOutlet.layer.cornerRadius = 25
+        playButtonOutlet.layer.cornerRadius = 10
         progressBar.isHidden = true
         loadingLabel.isHidden = true
     }
