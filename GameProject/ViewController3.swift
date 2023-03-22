@@ -68,14 +68,14 @@ class ViewController3: UIViewController {
     }
     
     func genret(){
-        var firstNumber = Int.random(in: 1...99)
-        var secondNumber = Int.random(in: 1...99)
+        let firstNumber = Int.random(in: 1...99)
+        let secondNumber = Int.random(in: 1...99)
         
-        var array = ["+","-"]
-        var opretor = array.randomElement()
+        let array = ["+","-"]
+        let opretor = array.randomElement()
         
-        var addition = firstNumber + secondNumber
-        var subsraction = firstNumber - secondNumber
+        let addition = firstNumber + secondNumber
+        let subsraction = firstNumber - secondNumber
         
         operatorLabel.text = opretor
         
@@ -118,7 +118,7 @@ class ViewController3: UIViewController {
     }
     
     func naviget(){
-        let n1 = storyboard?.instantiateViewController(withIdentifier: "ViewController2") as! ViewController2
+        let n = storyboard?.instantiateViewController(withIdentifier: "ViewController2") as! ViewController2
         navigationController?.popViewController(animated: false)
     }
     
